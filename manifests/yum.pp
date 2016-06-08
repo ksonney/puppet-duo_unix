@@ -27,7 +27,7 @@ class duo_unix::yum {
     $releasever = '$releasever'
   } else {
     $os = $::operatingsystem
-    $releasever = '$releasever'
+    $releasever = $::operatingsystemmajrelease
   }
 
   yumrepo { 'duosecurity':
